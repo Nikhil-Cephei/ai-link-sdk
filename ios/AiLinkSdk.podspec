@@ -20,10 +20,14 @@ Pod::Spec.new do |s|
 
   s.dependency 'ExpoModulesCore'
 
+  # Local AILinkBleSDK vendored framework
+  s.vendored_frameworks = 'Framework/AILinkBleSDK.framework'
+
   # Swift/Objective-C compatibility
   s.pod_target_xcconfig = {
     'DEFINES_MODULE' => 'YES',
+    'FRAMEWORK_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/../node_modules/ai-link-sdk/ios/Framework',
   }
 
-  s.source_files = "**/*.{h,m,mm,swift,hpp,cpp}"
+  s.source_files = "*.{h,m,mm,swift,hpp,cpp}"
 end
