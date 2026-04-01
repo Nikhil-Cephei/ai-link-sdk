@@ -61,7 +61,7 @@ function addFeature(
   );
   if (!already) {
     manifest['uses-feature'].push({
-      $: { 'android:name': name, 'android:required': String(required) },
+      $: { 'android:name': name, 'android:required': String(required) as 'true' | 'false' },
     });
   }
 }
@@ -73,7 +73,7 @@ function applyAndroidManifest(
   { backgroundLocation = false }: AiLinkSdkPluginProps,
 ): void {
   // Ensure the tools namespace is declared (needed for tools:remove / tools:targetApi).
-  if (!manifest.$) manifest.$ = {};
+  if (!manifest.$) manifest.$ = { 'xmlns:android': 'http://schemas.android.com/apk/res/android' };
   if (!manifest.$['xmlns:tools']) {
     manifest.$['xmlns:tools'] = 'http://schemas.android.com/tools';
   }

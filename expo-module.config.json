@@ -1,6 +1,6 @@
 {
   "platforms": ["apple", "android"],
-  "plugin": "./plugin/index",
+  "plugin": "./build/plugin/index",
   "apple": {
     "modules": ["AiLinkSdkModule"]
   },
