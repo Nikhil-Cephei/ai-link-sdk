@@ -1,0 +1,9 @@
+{
+  "platforms": ["apple", "android", "web"],
+  "apple": {
+    "modules": ["AiLinkSdkModule"]
+  },
+  "android": {
+    "modules": ["expo.modules.ailinksdk.AiLinkSdkModule"]
+  }
+}

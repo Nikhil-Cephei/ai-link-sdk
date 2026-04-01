@@ -1,0 +1,10 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "ai-link-sdk": ["../src/index"],
+      "ai-link-sdk/*": ["../src/*"]
+    }
+  }
+}
