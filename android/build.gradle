@@ -16,3 +16,8 @@ android {
     abortOnError false
   }
 }
+
+dependencies {
+  implementation 'com.github.elinkthings:AILinkSDKRepositoryAndroid:1.15.08'
+  implementation 'com.github.elinkthings:AILinkSDKParsingLibraryAndroid:1.9.18'
+}

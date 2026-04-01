@@ -1,2 +1,8 @@
-<manifest>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application>
+        <!-- AILink BLE background service required by AILinkBleManager -->
+        <service
+            android:name="com.pingwang.bluetoothlib.server.ELinkBleServer"
+            android:foregroundServiceType="connectedDevice" />
+    </application>
 </manifest>
