@@ -4,6 +4,10 @@
   "description": "AILink BLE height and body fat scale SDK for React Native / Expo. Provides the HeightBodyFatScale class, React hooks, a Zustand-backed connection store, and an Expo config plugin for Android BLE permissions.",
   "main": "build/index.js",
   "types": "build/index.d.ts",
+  "exports": {
+    ".": "./index.ts",
+    "./plugin": "./plugin/index.ts"
+  },
   "scripts": {
     "build": "expo-module build",
     "clean": "expo-module clean",
@@ -18,6 +22,11 @@
   "keywords": [
     "react-native",
     "expo",
+    "expo-module",
+    "ble",
+    "scale",
+    "body-fat",
+    "ailink",
     "ai-link-sdk",
     "AiLinkSdk"
   ],
@@ -28,7 +37,6 @@
   "author": "Nikhil Makwana <nikhil.makwana@cepheiinfotech.com> (Nikhil-Cephei)",
   "license": "MIT",
   "homepage": "https://github.com/Nikhil-Cephei/ai-link-sdk.git#readme",
-  "dependencies": {},
   "devDependencies": {
     "@types/react": "~19.1.1",
     "expo-module-scripts": "^55.0.2",
@@ -38,6 +46,21 @@
   "peerDependencies": {
     "expo": "*",
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "expo-modules-core": ">=2.0.0",
+    "react-native-mmkv": ">=3.0.0",
+    "react-native-permissions": ">=4.0.0",
+    "zustand": ">=4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react-native-mmkv": {
+      "optional": false
+    },
+    "react-native-permissions": {
+      "optional": false
+    },
+    "zustand": {
+      "optional": false
+    }
   }
 }
